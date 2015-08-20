@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Rules:</strong>
+  <% rules = @event.rules.split "#" %>
+  <% rules.each do |rule| %>
+    <li>
+      <%= rule %>
+    </li> 
+    <% end %>
+</p>
+
+<p>
+  <strong>Contact1:</strong>
+  <%= @event.contact1 %>
+</p>
+
+<p>
+  <strong>Contact2:</strong>
+  <%= @event.contact2 %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

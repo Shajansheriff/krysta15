@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   scope :krysta15 do
+    resources :events
     get '/' => 'welcome#index'
   end
 
