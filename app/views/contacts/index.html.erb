@@ -1,0 +1,62 @@
+
+
+
+<div class="container">
+        <div class="contact-us"> 
+        <% if notice.present? %>
+  
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <strong>Alert!</strong> <p id="notice"><%= notice %></p>
+</div>
+
+<% end %>
+       
+        <div class="contact-us_left">
+             <div class="company_address">
+              <h3 class="style">Contact Information :</h3>
+            <p>No. 35, Samanthi Block (8th Block)</p>
+            <p>CEG Hostel, Anna University</p>
+            <p>Chennai - 600025</p>
+              <p>Phone: +91 9677475231 | 9751362867</p>
+            <p>Email: <a href="javascript:void(0);">smse2k16@gmail.com</a></p>
+              <p>Follow on: <a href="https://www.facebook.com/cegkrysta">Facebook</a></p>
+           </div>
+        </div>        
+        <div class="contact_right">
+          <div class="contact-form">
+              <%= form_for(@contact) do |f| %>
+              
+              <% if @contact.errors.any? %>
+                <div class="alert alert-warning alert-dismissible" role="alert" style="padding: 5px;">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <b><%= pluralize(@contact.errors.count, "error") %> prohibited this Query from being saved </b>
+                  <% @contact.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </div>
+              <% end %>
+                <div>
+                  <p>NAME</p>
+                  <span> <%= f.text_field :name, class: 'textbox' %> </span>
+                </div>
+                <div>
+                  <p>E-MAIL</p>
+                  <span><%= f.text_field :email, class: 'textbox' %></span>
+                </div>
+                <div>
+                  <p>MOBILE</p>
+                  <span><%= f.text_field :mobile, class: 'textbox' %></span>
+                </div>
+                <div>
+                  <p>MESSAGE</p>
+                  <span><%= f.text_area(:message) %></span>
+                </div>
+               <div>
+                  <input type="submit" value="submit us">
+              </div>
+              <% end %>
+            </div>
+          </div>    
+          <div class="clear"></div>   
+      </div>
+   </div> 

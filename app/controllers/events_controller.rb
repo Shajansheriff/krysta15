@@ -1,9 +1,14 @@
 class EventsController < ApplicationController
+  layout 'application1'
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
   # GET /events.json
   def index
+    @title = 'Our Events'
+    @title_desc = 'Events that are going to be held will makes you more enthusiastic 
+                  and is going to be interesting and informative which will kindle 
+                  your knowledge towards materials. '
     @events = Event.all
   end
 
@@ -69,6 +74,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :description, :rules, :contact1, :contact2)
+      params.require(:event).permit(:title, :description, :rules, :contact1, :contact2, :image)
     end
 end

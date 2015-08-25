@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Krysta15</title>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="description" content="Krysta, An Intra college symposium conducted by SMSE, CEG, Anna University" />
+   <meta name="keywords" content="krysta, krysta15, smse, Material Science, Anna University, ceg, symposium, engineering" />
+  <meta name="author" content="CodeBreaker | shajansheriff@gmail.com | 8122266535">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script>
+		 new WOW().init();
+		</script>
+</head>
+<body>
+<div class="bg4">
+			  <%= render 'layouts/menu' %>
+				 
+				 <div class="service-banner text-right">					  
+						<h2><%= @title %></h2>
+						<p><%= @title_desc %></p>						
+				</div>
+				 </div>
+				<div class="clearfix"></div>		
+		     </div>	
+		 <!-- banner -->
+			
+		<%= yield %>
+
+			
+			<!-- footer -->
+			<div class="footer">
+				<div class="container">
+					<div class="footer-grids">
+						<div class="col-md-4 footer-grid ftr-sec wow fadeInLeft" data-wow-delay="0.4s">
+							<h3>Navigation</h3>
+							<ul>
+								<li><%= link_to 'Home', '/krysta15' %></li>
+								<li><%= link_to 'Events', events_path %></li>
+								<li><%= link_to 'Workshop', workshops_path %></li>
+								<li><%= link_to 'Gallery', gallery_path %></li>
+								<li><%= link_to 'Contacts', contacts_path %></li>
+							</ul>
+						</div>
+						
+						<div class="col-md-4 footer-grid ftr-sec wow fadeInRight" data-wow-delay="0.4s">
+							<h3>Follows</h3>
+							<ul class="social-icons">
+								<li><a class="facebook" href="http://www.facebook.com/cegquanta"><span> </span>Facebook</a></li>
+								<li><a class="googlepluse" href="#"><span> </span>google+</a></li>								
+							</ul>
+						</div>
+						<div class="col-md-4 footer-grid ftr-sec ftr wow fadeInRight" data-wow-delay="0.4s">
+							<h3>Our Location</h3>
+							<ul class="location">
+								<li><a class="hm" href="javascript:void(0)"><span> </span>No. 35, Samanthi Block (8th Block)
+CEG Hostel, Anna University
+Chennai - 600025</a></li>
+								<li><a class="phn" href="javascript:void(0)"><span> </span>MOBILE:+91 9677475231.</a></li>
+							</ul>							
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<p class="copy-right wow bounceInRight" data-wow-delay="0.4s"> Design by <a href="javascript:void(0)">Websters | CodeBreaker</a></p>
+				</div>
+			</div>
+			<!-- footer -->
+
+</body>
+</html>

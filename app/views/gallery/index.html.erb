@@ -1,0 +1,225 @@
+<!--gallery-->
+<div class="portfolio">
+		 <!-- Gallery Starts Here -->
+	 <div class="portfolios entertain_box  wow fadeInUp" data-wow-delay="0.4s" id="project">
+		 <div class="portfolio-top">
+				<!-- <h3>Gallery</h3> -->
+				<div class="col-md-3"> </div>
+				<ul id="filters" class="clearfix">
+							<li><span class="filter active" data-filter="app card photo logo web">All</span></li>
+							<li><span class="filter" data-filter="app">Quanta</span></li>
+							<li><span class="filter" data-filter="card">Organisers</span></li>
+							<li><span class="filter" data-filter="web">Photography</span></li>
+				</ul>					
+				<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/1.jpg" class="b-link-stripe b-animate-go   swipebox"  title="Quanta">
+						     <img src="gallery/1.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>				
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/2.jpg" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="gallery/2.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>		
+					<div class="portfolio photo mix_all" data-cat="photo" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/3.jpg" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="gallery/3.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>				
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/4.jpg" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="gallery/4.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>	
+					<div class="portfolio photo mix_all" data-cat="photo" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/5.jpg" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="gallery/5.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>			
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/6.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+						     <img src="gallery/6.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/7.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+						     <img src="gallery/7.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+					<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gallery/8.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+						     <img src="gallery/8.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/zoom.png" class="zoom" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+					<div class="clearfix"></div>
+		     </div>
+	      </div>
+</div>
+		<link rel="stylesheet" href="css/swipebox.css">
+			<script src="js/jquery.swipebox.min.js"></script> 
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+				</script>
+			<!-- Portfolio Ends Here -->
+			<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+		<script type="text/javascript">
+		$(function () {
+			
+			var filterList = {
+			
+				init: function () {
+				
+					// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+
+		// Run the show!
+			filterList.init();
+			
+		});	
+		</script>
+</div>
+<div class="sldr">
+	 <div class="container">
+	 <div class="sponcers">
+		<h2>Our Featured Sponcers</h2>
+	 </div>
+	 <ul id="flexiselDemo1">
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/1.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/2.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/3.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/4.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/6.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/7.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/8.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/9.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/10.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/11.png" %>
+			</div>
+		</li>
+		
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/12.png" %>
+			</div>
+		</li>
+		<li>
+			<div class="biseller-column">
+			<%= image_tag "sponcers/13.png" %>
+			</div>
+		</li>
+	</ul>
+	<script type="text/javascript">
+	 $(window).load(function() {
+		$("#flexiselDemo1").flexisel({
+			visibleItems: 3,
+			animationSpeed: 1000,
+			autoPlay: true,
+			autoPlaySpeed: 3000,    		
+			pauseOnHover: true,
+			enableResponsiveBreakpoints: true,
+			responsiveBreakpoints: { 
+				portrait: { 
+					changePoint:480,
+					visibleItems: 1
+				}, 
+				landscape: { 
+					changePoint:640,
+					visibleItems: 2
+				},
+				tablet: { 
+					changePoint:768,
+					visibleItems: 3
+				}
+			}
+		});
+		
+		});
+	   </script>
+	   <script type="text/javascript" src="js/jquery.flexisel.js"></script>		
+	 </div>
+</div>

@@ -1,34 +1,35 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="mid-grids">
+    <div class="container">
+      <div class="mid-grid">
+          <div class="col-md-4 mid-grid-left  wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInRight;">
+            <%= image_tag @event.image, alter: @event.title %>
+          </div>
+          <div class="col-md-8 mid-grid-right  wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInLeft;">
+            <!-- <h3>Nunc aliquet condimentum mauris, sit amet commodo ipsum condimentum </h3> -->
+            <h4> <%= @event.title %></h4>
+            <p><%= @event.description %></p>
+            <p> <b>Contact:</b> <%= @event.contact1 %> | <%= @event.contact2 %></p>
+          </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Rules:</strong>
-  <% rules = @event.rules.split "#" %>
-  <% rules.each do |rule| %>
-    <li>
-      <%= rule %>
-    </li> 
-    <% end %>
-</p>
-
-<p>
-  <strong>Contact1:</strong>
-  <%= @event.contact1 %>
-</p>
-
-<p>
-  <strong>Contact2:</strong>
-  <%= @event.contact2 %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<div class="bottom-grids">
+        <div class="container">
+        <div class="col-md-12">
+            <div class="ourservices">
+              <h2>Rules:</h2>
+              <ul>
+              <% rules = @event.rules.split "#" %>
+              <% rules.each do |rule| %>
+                <li><a href="#"><span> </span><%= rule %></a></li>
+              <% end %>
+              </ul>
+            </div>
+        </div>
+        
+        <div class="clearfix"> </div>
+        </div>
+      </div>

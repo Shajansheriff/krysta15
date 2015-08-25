@@ -1,7 +1,14 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Krysta15</title>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="description" content="Krysta, An Intra college symposium conducted by SMSE, CEG, Anna University" />
+   <meta name="keywords" content="krysta, krysta15, smse, Material Science, Anna University, ceg, symposium, engineering" />
+  <meta name="author" content="CodeBreaker | shajansheriff@gmail.com | 8122266535">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,21 +19,21 @@
 <body>
 <div class="bg">
 			<div class="container">
-		<!-- start-header---->
+		<!-- start-header -->
 			<div id="home" class="header wow bounceInDown" data-wow-delay="0.4s>
 					<div class="top-header">
 						<div class="logo wow bounceInDown" data-wow-delay="0.4s">
-							<a href="#"><img src="images/logo4.png" title="dreams" /></a>
+							<a href="/krysta15"><%= image_tag "logo.png", alter: "Krysta15" %></a>
 						</div>
 						<!----start-top-nav---->
 						 <nav class="top-nav wow bounceInDown" data-wow-delay="0.4s">
 						  <span class="menu"> </span>
 							<ul class="top-nav">
 								<li class="active"><a href="index.html" class="scroll">Home</a></li>
-								<li><a href="service.html">Services</a></li>
-								<li><a href="port.html">Portfolio</a></li>
-								<li><a href="team.html">Team</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><%= link_to 'Events', events_path %></li>
+								<li><%= link_to 'Workshop', workshops_path %></li>
+								<li><%= link_to 'Gallery', gallery_path %></li>
+								<li><%= link_to 'Contacts', contacts_path %></li>
 							</ul>
 						</nav>
 						<script>
@@ -39,12 +46,11 @@
 					</div>
 				</div>
 				<!----- banner ---->
-				<!----- banner ---->
 				<div class="banner text-right">
 					<div class="container">
-						<h1>BUILD THE WEBSITE OF YOUR INDUSTRIALS</h1>	
+						<h1>Welcome To Krysta'15</h1>	
 							<div class="clearfix"></div>
-						<p>We are a digital agency that believes in building things that are meaningful!</p>
+						<p>An intra-collegiate symposium conducted by SMSE, CEG</p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -58,47 +64,39 @@
 			<div class="footer">
 				<div class="container">
 					<div class="footer-grids">
-						<div class="col-md-3 footer-grid ftr-sec wow fadeInLeft" data-wow-delay="0.4s">
+						<div class="col-md-4 footer-grid ftr-sec wow fadeInLeft" data-wow-delay="0.4s">
 							<h3>Navigation</h3>
 							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="#">Portfolio</a></li>
-								<li><a href="#">Products</a></li>
-								<li><a href="#">Contact</a></li>								
+								<li><%= link_to 'Home', '/krysta15' %></li>
+								<li><%= link_to 'Events', events_path %></li>
+								<li><%= link_to 'Workshop', workshops_path %></li>
+								<li><%= link_to 'Gallery', gallery_path %></li>
+								<li><%= link_to 'Contacts', contacts_path %></li>
 							</ul>
 						</div>
-						<div class="col-md-3 footer-grid ftr-sec wow fadeInLeft" data-wow-delay="0.4s">
-							<h3>For Clients</h3>
-							<ul>
-								<li><a href="#">Forums</a></li>
-								<li><a href="#">Pramotions</a></li>
-								<li><a href="#">Sign in</a></li>
-								<li><a href="#">News</a></li>								
-							</ul>
-						</div>
-						<div class="col-md-3 footer-grid ftr-sec wow fadeInRight" data-wow-delay="0.4s">
+						
+						<div class="col-md-4 footer-grid ftr-sec wow fadeInRight" data-wow-delay="0.4s">
 							<h3>Follows</h3>
 							<ul class="social-icons">
-								<li><a class="twitter" href="#"><span> </span>twitter</a></li>
-								<li><a class="facebook" href="#"><span> </span>Facebook</a></li>
+								<li><a class="facebook" href="http://www.facebook.com/cegquanta"><span> </span>Facebook</a></li>
 								<li><a class="googlepluse" href="#"><span> </span>google+</a></li>								
 							</ul>
 						</div>
-						<div class="col-md-3 footer-grid ftr-sec ftr wow fadeInRight" data-wow-delay="0.4s">
+						<div class="col-md-4 footer-grid ftr-sec ftr wow fadeInRight" data-wow-delay="0.4s">
 							<h3>Our Location</h3>
 							<ul class="location">
-								<li><a class="hm" href="#"><span> </span>LOREM IPSUM DOLOR SIT AMET.</a></li>
-								<li><a class="phn" href="#"><span> </span>TELEPHONE:123456789.</a></li>
+								<li><a class="hm" href="#"><span> </span>No. 35, Samanthi Block (8th Block)
+CEG Hostel, Anna University
+Chennai - 600025</a></li>
+								<li><a class="phn" href="#"><span> </span>MOBILE:+91 9677475231.</a></li>
 							</ul>							
 						</div>
 						<div class="clearfix"> </div>
 					</div>
-					<p class="copy-right wow bounceInRight" data-wow-delay="0.4s"">2014 &copy; Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+					<p class="copy-right wow bounceInRight" data-wow-delay="0.4s"> Design by <a href="javascript:void(0)">Websters | CodeBreaker</a></p>
 				</div>
 			</div>
-			<!---- footer ---->
+			<!-- footer -->
 
 </body>
 </html>

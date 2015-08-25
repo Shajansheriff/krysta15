@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
+
   scope :krysta15 do
+    resources :workshops
+    resources :contacts
+    get 'gallery' => 'gallery#index'
     resources :events
     get '/' => 'welcome#index'
   end

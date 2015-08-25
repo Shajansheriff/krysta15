@@ -1,0 +1,56 @@
+
+ <div class="contact_right">
+   
+ 
+<div class="contact-form">
+<% if notice.present? %>
+  
+<div class="alert alert-warning alert-dismissible" role="alert" style="padding:10px;">
+  <strong>Hello!</strong> <p id="notice"><%= notice %></p>
+</div>
+
+<% end %>
+
+<%= form_for(@workshop) do |f| %>
+   <% if @workshop.errors.any? %>
+      <div class="alert alert-warning alert-dismissible" role="alert" style="padding: 5px;">
+        <b><%= pluralize(@workshop.errors.count, "error") %> prohibited registration process </b>
+        <% @workshop.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </div>
+    <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :NAME %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :college %>
+    <%= f.text_field :college %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :department %>
+    <%= f.text_field :department %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Register" %>
+  </div>
+<% end %>
+
+</div>
+</div>
