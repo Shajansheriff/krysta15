@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
   def index
     #@contacts = Contact.all
     @title = "Contacts"
-    @title_desc = "You"
+    @title_desc = "Always at your service!"
     @contact = Contact.new
 
   end

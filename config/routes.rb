@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-
+  root 'welcome#krysta'
   scope :krysta15 do
     resources :workshops
     resources :contacts
