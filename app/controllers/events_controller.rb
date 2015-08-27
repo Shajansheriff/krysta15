@@ -6,9 +6,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @title = 'Our Events'
-    @title_desc = 'Events that are going to be held will makes you more enthusiastic 
-                  and is going to be interesting and informative which will kindle 
-                  your knowledge towards materials. '
+    @title_desc = 'Kindle your knowledge on materials. '
     @events = Event.all
   end
 

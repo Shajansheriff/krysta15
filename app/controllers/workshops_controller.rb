@@ -8,6 +8,7 @@ class WorkshopsController < ApplicationController
     #@workshops = Workshop.all
 
     @title = "Workshop"
+    @title_desc = "A place to enhance knowledge and explore innovation."
   end
 
   # GET /workshops/1
