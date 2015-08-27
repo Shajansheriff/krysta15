@@ -4,8 +4,8 @@
           <div class="container"> 
             <div class="service-grids">
             <% @events.each do |event| %>
-              <div class="col-md-3 service-grid">           
-                  <a href="javascript:void(0)"> <%= image_tag "#{event.image}", alter: event.title %> </a>
+              <div class="col-md-3 service-grid event-grid">           
+                  <a href="javascript:void(0)"> <%= image_tag "#{event.image}", class: 'event-grid-img', alter: event.title %> </a>
                   <div class="tour-caption">
                   <p>
                     <b>Contact</b> <br>

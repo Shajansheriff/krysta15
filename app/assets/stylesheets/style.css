@@ -524,6 +524,7 @@ text-align: center;
 	margin: 15px 5px;
     min-width: 22%;
     width: 24%;
+    height: 500px;
 }
 .bg2{
 	background:url(../images/ser-banner.jpg) no-repeat 0px 0px fixed;
@@ -594,7 +595,7 @@ text-decoration: none;
     width: 95%;
     position: absolute;
     background: rgba(80, 96, 131, 0.76);
-    height: 51%;
+    height: 56%;
     text-align: center;
     padding-top: 30%;
 }
@@ -1102,7 +1103,7 @@ padding-bottom: 6em;
 .company_address p{
 	color: #242424;
 	text-shadow: 0 1px 0 #ffffff;
-	line-height: 1.8em;
+	/*line-height: 1.2em;*/
 	font-size: 0.8125em;
 	font-weight: 600;
 }
@@ -2355,4 +2356,12 @@ width: 69%;
 
 .register-font {
 	font-size: 16px;
+}
+
+.event-grid {
+	height: 400px;
+}
+
+.event-grid-img {
+	height: 220px;
 }
